@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+--Declara todas as entradas e saidas do circuto
+entity mux_1 is
+	port(
+        lin1, lin2 : in std_logic;
+		in1, in2, sel: in std_logic;
+        s: out std_logic
+    );
+end mux_1;
+
+architecture arch of mux_1 is
+
+
+--Declara as linhas entre as and e a or
+begin
+        s <= (in1 and not sel) or (in2 and sel);
+end arch;
